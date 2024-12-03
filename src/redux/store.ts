@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import homeDashboardReducers from './reducers/homeDashboardReducers'
 import homeDashboardStatsReducers from './reducers/homeDashboardStatsReducers'
+import authLoginReducers from './reducers/authLoginReducers'
 
 export const store = configureStore({
     reducer: {
         home_dashboard: homeDashboardReducers,
         home_dashboard_stats: homeDashboardStatsReducers,
+        auth_login: authLoginReducers,
     },
 })
 

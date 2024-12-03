@@ -7,18 +7,18 @@ interface apiRequestType {
     headers?: object
     data?: object
     params?: object
-    path: string
+    path?: string
     apiVersion?: string
     token?: string | undefined
 }
 
-export const apiRequest = async ({ method, timeout, headers, data, params, path, apiVersion }: apiRequestType) => {
+export const apiRequest = async ({ method, timeout, headers, data, params, path, apiVersion, url }: apiRequestType) => {
     const defaultParams = {}
     const mergedParams = { ...defaultParams, ...params }
 
     const config: AxiosRequestConfig = {
         method,
-        url: `api/${apiVersion}${path}`,
+        url: `${url}`,
         timeout: 5000,
         params: mergedParams,
     }

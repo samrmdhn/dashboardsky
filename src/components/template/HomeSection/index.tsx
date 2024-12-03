@@ -16,7 +16,6 @@ import { useAppDispatch } from '@/redux/hook'
 import { getHomeDashboardStatsService } from '@/redux/services/homeDashboardStatsService'
 import HomeStats from '@/components/molecules/HomeStats'
 import HomeCharts from '@/components/molecules/HomeCharts'
-import HomeSectionDetail from '@/components/molecules/HomeSectionDetail'
 
 type HomeSectionProps = {
     data: any
